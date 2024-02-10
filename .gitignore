@@ -1,2 +1,4 @@
 node_modules
 .env
+private_key.pem
+private-key.ppk
