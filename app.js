@@ -16,10 +16,14 @@ app.get('/', (req, res) => {
 
 // Webhook endpoint for receiving messages from WhatsApp
 app.post('/webhook', (req, res) => {
-    console.log(req)
+    console.log(req.data)
     // Send a response if needed
     res.status(200).json({ success: true });
 });
+
+app.get('/webook', (req,res) => {
+    res.send("POST RE")
+})
 
 const options = {
     key: fs.readFileSync('key.pem'),
