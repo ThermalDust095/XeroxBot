@@ -19,11 +19,8 @@ app.post('/webhook', (req, res) => {
     console.log(req.data)
     // Send a response if needed
     res.status(200).json({ success: true });
+    res.send("done")
 });
-
-app.get('/webook', (req,res) => {
-    res.send("POST RE")
-})
 
 const options = {
     key: fs.readFileSync('key.pem'),
